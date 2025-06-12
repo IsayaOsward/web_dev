@@ -65,6 +65,7 @@
           <p>Here are places i would like to visit</p>
         </section>
         <section>
+          <h2>Places to visit</h2>
           <ol>
             <li>Mount Kilimanjaro</li>
             <li>Serengeti National Park</li>
@@ -190,16 +191,18 @@
               </tr>
             </tbody>
             <tfoot>
-              <td colspan="3">
-                And thats what i do everyday, 5 days a week. Just eat, sleep,
-                code .. and recharge!
-              </td>
+              <tr>
+                <td colspan="3">
+                  And thats what i do everyday, 5 days a week. Just eat, sleep,
+                  code .. and recharge!
+                </td>
+              </tr>
             </tfoot>
           </table>
         </section>
       </article>
       <hr />
-      <article id="contacts">
+      <article id="contactss">
         <h2>Contact Me</h2>
         <p>I'd really like to hear from you!'</p>
 
@@ -246,11 +249,39 @@
                 id="phonenumber"
                 placeholder="255"
                 autocomplete="on"
-                pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
                 required
               />
             </p>
+            <select name="address" id="address">
+              <optgroup label="Kusini">
+                <option value="ir">Iringa</option>
+                <option value="ir">Mbeya</option>
+              </optgroup>
+              <optgroup label="Kanda ya kati">
+                <option value="ir">Dodoma</option>
+                <option value="ir">Singida</option>
+              </optgroup>
+              <optgroup label="Mashariki">
+                <option value="ir">Dar</option>
+                <option value="ir">Tanga</option>
+              </optgroup>
+            </select>
+            <br />
+            <input type="text" name="coffee" id="coffee" list="coffee-list" />
+            <datalist id="coffee-list">
+              <option value="coffee"></option>
+              <option value="latte"></option>
+              <option value="other"></option>
+            </datalist>
+            <button type="reset">Clear</button>
             <button type="submit">Submit</button>
+            <button
+              type="submit"
+              formaction="https://httpbin.org/post"
+              formmethod="post"
+            >
+              Post
+            </button>
           </fieldset>
         </form>
       </article>
